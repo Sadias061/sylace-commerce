@@ -1,129 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/_css/style.css">
-    <link rel="stylesheet" href="assets/_css/fontawesome/all.min.css">
-    <title>Sylace Shopping</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sylace Shopping - Blog. Conseils, tendances et actualites mode.">
+  <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/_css/style.css">
+  <title>Blog - Sylace Shopping</title>
 </head>
 
 <body>
 
-    <!-- Barre de navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
-        <div class="container-fluid">
-            <img id="logo" src="assets/imgs/sl.jpg" alt="logo de l'entreprise">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contactez-nous</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <i class="fas fa-shopping-bag ms-2"></i>
-                        <i class="fas fa-user ms-4"></i>
-                        <i></i>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+    <div class="container-fluid">
+      <a href="index.html">
+        <img id="logo" src="assets/imgs/sl.jpg" alt="Sylace Shopping logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contactez-nous</a>
+          </li>
+          <li class="nav-icons">
+            <a href="shop.html" aria-label="Panier"><i class="fas fa-shopping-bag"></i></a>
+            <a href="#" aria-label="Compte"><i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1 data-aos="fade-up">Notre Blog</h1>
+    <nav class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="100">
+      <a href="index.html">Accueil</a>
+      <span>/</span>
+      <span>Blog</span>
     </nav>
+  </section>
 
-    <!-- Footer -->
-    <footer class="mt-5 py-5 bg-dark">
-        <div class="row container mx-auto pt-5">
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <img class="logoBotom" src="assets/imgs/sl.jpg" alt="img">
-                <p class="pt-3 text-light">Nous souhaitons que vous appréciez notre site web et que vous trouviez ce
-                    que vous
-                    cherchez. Les produits et les services offerts sur notre site web sont fournis par des tiers
-                    indépendants.</p>
-            </div>
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Produit et categories</h5>
-                <ul>
-                    <li><a href="#">Nouveaux arrivages</a></li>
-                    <li><a href="#">chaussures de sport</a></li>
-                    <li><a href="#">vetements</a></li>
-                    <li><a href="#"> Montres</a></li>
-                </ul>
-
-            </div>
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Contactez-nous</h5>
-                <ul>
-                    <li><span><a href=""><i class="fas fa-phone me-2"></i></a></span><a href="#">+212 6 10 20 30 40</a>
-                    </li>
-                    <li> <span><a href=""><i class="fas fa-envelope me-2"></i></a></span><a
-                            href="#">sylshoping@gmail.com</a></li>
-                    <li><span><a href=""><i class="fas fa-map-marker-alt me-2"></i></a></span><a href="#">Bohicon rue
-                            1495</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Liens vers les reseaux sociaux</h5>
-                <ul>
-                    <li><span><a class="facebook"
-                                href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr"><i
-                                    class="fab fa-facebook me-2"> </i></a></span><a
-                            href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr">Facebook</a></li>
-                    </li>
-
-                    <li><span><a href="https://www.whatsapp.com/?lang=fr_FR"><i
-                                    class="fab fa-whatsapp me-2"></i></a></span><a
-                            href="https://www.whatsapp.com/?lang=fr_FR">whatsapp</a></li>
-
-                    <li><span><a href="https://x.com/"><i class="fab fa-twitter me-2"></i></a></span><a
-                            href="https://x.com/">Twitter</a></li>
-                    <li><span><a href="https://www.instagram.com/"><i
-                                    class="fab fa-instagram me-2"></i></a></i></span><a
-                            href="https://www.instagram.com/">Instagram</a></li>
-                </ul>
-            </div>
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-img">
+          <img src="assets/imgs/new2.webp" alt="Guide des sacs tendance">
         </div>
-        <div class="copyright mt-5">
-            <div class="row container mx-auto">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="payment-img w-50" src="assets/imgs/payment.png" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-light text-nowrap mb-2">
-                    <p>eCommerce ©2025 All rights reserved | This template is made with by
-                        <i class="fas fa-heart"></i><span>Sylace </span><i class="fas fa-heart"></i>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="logo" src="assets/imgs/logo.png" alt="">
-                </div>
-            </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Tendances</span>
+            <span>15 Jan 2025</span>
+          </div>
+          <h3>Guide des sacs tendance pour cette saison</h3>
+          <p class="blog-excerpt">Decouvrez les sacs les plus en vogue cette saison. Des modeles classiques aux designs modernes, notre selection vous aidera a trouver le sac parfait pour chaque occasion.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
         </div>
-    </footer>
+      </article>
 
-    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
-        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- Blog Card 2 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-img">
+          <img src="assets/imgs/new3.webp" alt="Comment choisir sa montre">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Guides</span>
+            <span>8 Jan 2025</span>
+          </div>
+          <h3>Comment choisir la montre tactile ideale</h3>
+          <p class="blog-excerpt">Les montres tactiles combinent technologie et elegance. Apprenez comment choisir le modele qui correspond a vos besoins et votre style de vie quotidien.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
 
+      <!-- Blog Card 3 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-img">
+          <img src="assets/imgs/new1.webp" alt="Equipement pour conferences">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Conseils</span>
+            <span>2 Jan 2025</span>
+          </div>
+          <h3>L'equipement essentiel pour vos conferences</h3>
+          <p class="blog-excerpt">Organisez des presentations reussies avec le bon equipement. Des projecteurs aux accessoires, decouvrez notre guide complet pour des conferences professionnelles.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+
+      <!-- Blog Card 4 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-img">
+          <img src="assets/imgs/shoes1.webp" alt="Chaussures de sport tendances">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Sport</span>
+            <span>20 Dec 2024</span>
+          </div>
+          <h3>Les chaussures de sport incontournables en 2025</h3>
+          <p class="blog-excerpt">Que vous soyez coureur, marcheur ou simplement amateur de style sportif, notre selection de chaussures de sport vous offre confort et performance au quotidien.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+
+      <!-- Blog Card 5 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-img">
+          <img src="assets/imgs/vet1.webp" alt="Mode vetements">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Mode</span>
+            <span>15 Dec 2024</span>
+          </div>
+          <h3>Tendances vestimentaires : ce qui se porte cette annee</h3>
+          <p class="blog-excerpt">De la chemise classique aux styles contemporains, explorez les tendances mode qui marquent cette annee et comment les adopter au quotidien.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+
+      <!-- Blog Card 6 -->
+      <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-img">
+          <img src="assets/imgs/goude1.webp" alt="Gourdes ecologiques">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="tag">Eco</span>
+            <span>10 Dec 2024</span>
+          </div>
+          <h3>Pourquoi adopter une gourde reutilisable</h3>
+          <p class="blog-excerpt">Reduisez votre impact environnemental avec nos gourdes reutilisables. Decouvrez les avantages pour votre sante et pour la planete.</p>
+          <button class="btn-read-more">Lire la suite <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img class="logoBotom" src="assets/imgs/sl.jpg" alt="Sylace Shopping">
+        <p>Nous souhaitons que vous appreciez notre site web et que vous trouviez ce que vous cherchez. Les produits et les services offerts sur notre site web sont fournis par des tiers independants.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Produits et categories</h5>
+        <ul>
+          <li><a href="shop.html">Nouveaux arrivages</a></li>
+          <li><a href="shop.html">Chaussures de sport</a></li>
+          <li><a href="shop.html">Vetements</a></li>
+          <li><a href="shop.html">Montres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contactez-nous</h5>
+        <ul>
+          <li><a href="tel:+21261020304"><i class="fas fa-phone"></i> +212 6 10 20 30 40</a></li>
+          <li><a href="mailto:sylshoping@gmail.com"><i class="fas fa-envelope"></i> sylshoping@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Bohicon rue 1495</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Reseaux sociaux</h5>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <img class="payment-img" src="assets/imgs/payment.png" alt="Methodes de paiement">
+        <p>eCommerce 2025 Tous droits reserves | Fait avec soin par <span>Sylace</span></p>
+        <img class="payment-img" src="assets/imgs/logo.png" alt="Logo Sylace">
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/_css/script.js"></script>
 </body>
 
 </html>
