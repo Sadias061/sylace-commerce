@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,25 +11,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/_css/style.css">
     <link rel="stylesheet" href="assets/_css/fontawesome/all.min.css">
-    <title>Sylace Shopping</title>
+    <title>Sylace Shopping - Détail Produit</title>
 </head>
 
-
-
 <body>
-    <!-- Barre de navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
-        <div class="container-fluid">
-            <img id="logo" src="assets/imgs/sl.jpg" alt="logo de l'entreprise" >
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a href="index.html">
+                <img id="logo" src="assets/imgs/sl.jpg" alt="Sylace Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shop.html">Shop</a>
@@ -38,198 +44,221 @@
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contactez-nous</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <i class="fas fa-shopping-bag ms-2"></i>
-                        <i class="fas fa-user ms-4"></i>
-                        <i></i>
-                    </li> -->
                 </ul>
+                <div class="d-flex align-items-center ms-3">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="produit-unique my-5 pt-5">
-        <div class="row mt-5">
+    <!-- Product Detail -->
+    <div class="produit-unique">
+        <div class="row mt-3">
             <div class="col-lg-5 col-md-6 col-sm-12">
-                <img class="img-fluid w-100 h-50 pb-1" src="assets/imgs/goude1.webp" alt="" id="mainImg">
+                <img class="img-fluid w-100 pb-1" src="assets/imgs/goude1.webp" alt="Gourde Premium" id="mainImg"
+                    style="border-radius: 12px; max-height: 450px; object-fit: cover;">
                 <div class="small-img-group">
                     <div class="small-img-col">
-                        <img class="small-img" src="assets/imgs/goude2.webp" width="100%" alt="goude1">
+                        <img class="small-img" src="assets/imgs/goude2.webp" width="100%" alt="Gourde vue 1">
                     </div>
                     <div class="small-img-col">
-                        <img class="small-img" src="assets/imgs/goude3.webp" width="100%" alt="goude3">
+                        <img class="small-img" src="assets/imgs/goude3.webp" width="100%" alt="Gourde vue 2">
                     </div>
                     <div class="small-img-col">
-                        <img class="small-img" src="assets/imgs/goude4.webp" width="100%" alt="goude4">
+                        <img class="small-img" src="assets/imgs/goude4.webp" width="100%" alt="Gourde vue 3">
                     </div>
                     <div class="small-img-col">
-                        <img class="small-img " src="assets/imgs/goude2.webp" width="100%" alt="goude2">
+                        <img class="small-img" src="assets/imgs/goude2.webp" width="100%" alt="Gourde vue 4">
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 col-12">
-                <h6>Hommes/Chaussures</h6>
-                <h4 class="py-4">Categorie homme</h4>
-                <h2 class="mb-4 text-secondary">8000 XOF</h2>
-                <input type="number" name="number" value="1" id="">
-                <button id="buy-btn" class="btn btn-outline-secondary">Ajouter au panier <span><i
-                            class="fas fa-shopping-cart "></i></span> </button>
-                <h4 class="mt-4 mb-5">Details du produit</h4>
-                <span class="text-secondary">Les details sur le produits seront decrits de façons brieve. Il s'agit
-                    d'une gourde servant de
-                    conteneur sa capacité s'élève d'un littre (1L) elle est fait en cuivre nous avons également
-                    d'autres types qui sont faites avec <br> d'autres matières</span>
+            <div class="col-lg-6 col-md-12 col-12 ps-lg-5 mt-4 mt-lg-0">
+                <h6>Hommes / Accessoires</h6>
+                <h4 class="py-2">Gourde Premium - Catégorie Homme</h4>
+                <div class="star mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 8px;">(24 avis)</span>
+                </div>
+                <h2 class="mb-4">8 000 XOF</h2>
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <input type="number" name="number" value="1" min="1" max="10">
+                    <button id="buy-btn" class="btn">
+                        Ajouter au panier <i class="fas fa-shopping-cart ms-2"></i>
+                    </button>
+                </div>
+                <h4 class="mt-4 mb-3">Détails du produit</h4>
+                <span class="text-secondary">Les détails sur le produit seront décrits de façon brève. Il s'agit
+                    d'une gourde servant de conteneur, sa capacité s'élève à un litre (1L). Elle est faite en cuivre.
+                    Nous avons également d'autres types qui sont faites avec d'autres matières.</span>
+
+                <div class="d-flex gap-3 mt-4">
+                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1rem; text-align: center; flex: 1;">
+                        <i class="fas fa-truck" style="color: var(--primary); font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Livraison gratuite</span>
+                    </div>
+                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1rem; text-align: center; flex: 1;">
+                        <i class="fas fa-shield-alt" style="color: var(--primary); font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Garantie 1 an</span>
+                    </div>
+                    <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1rem; text-align: center; flex: 1;">
+                        <i class="fas fa-undo" style="color: var(--primary); font-size: 1.3rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;">Retour 30 jours</span>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
-    <!-- Goudes -->
-    <section id="factured" class="pt-0">
-        <div class="container text-center ">
-            <h3>Nos meilleurs goudes </h3>
-            <hr class="w-25 mx-auto center">
-            <p>Ici vous trouverez nos differents produits en stock concernant les chaussures de sport avec leurs prix
-                respectifs</p>
+    <!-- Related Products -->
+    <section id="factured" class="pt-5 animate-on-scroll">
+        <div class="container text-center">
+            <h3>Produits similaires</h3>
+            <hr class="mx-auto">
+            <p>Vous pourriez aussi aimer ces produits</p>
         </div>
-
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude1.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+        <div class="row mx-auto container-fluid mt-4">
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude1.webp" alt="Gourde 1">
+                        <span class="badge-new">New</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Premium</h5>
+                        <h4 class="p-price">5 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">Goude</h5>
-                <h4 class="p-price">5000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude2.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude2.webp" alt="Gourde 2">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Sport</h5>
+                        <h4 class="p-price">5 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">Goude</h5>
-                <h4 class="p-price">5000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude3.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude3.webp" alt="Gourde 3">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Classic</h5>
+                        <h4 class="p-price">5 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">Goude</h5>
-                <h4 class="p-price">5000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude4.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude4.webp" alt="Gourde 4">
+                        <span class="badge-sale">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Mini</h5>
+                        <h4 class="p-price">5 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">Goude</h5>
-                <h4 class="p-price">5000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="mt-5 py-5 bg-dark">
+    <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <img class="logoBotom" src="assets/imgs/sl.jpg" alt="img">
-                <p class="pt-3 text-light">Nous souhaitons que vous appréciez notre site web et que vous trouviez ce
-                    que vous
+                <img class="logoBotom" src="assets/imgs/sl.jpg" alt="Sylace Logo">
+                <p class="pt-3">Nous souhaitons que vous appréciez notre site web et que vous trouviez ce que vous
                     cherchez. Les produits et les services offerts sur notre site web sont fournis par des tiers
-                    indépendants.</p>
+                    indépendants.</p>
             </div>
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Produit et categories</h5>
+                <h5>Produits & Catégories</h5>
                 <ul>
                     <li><a href="#">Nouveaux arrivages</a></li>
-                    <li><a href="#">chaussures de sport</a></li>
-                    <li><a href="#">vetements</a></li>
-                    <li><a href="#"> Montres</a></li>
-                </ul>
-
-            </div>
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Contactez-nous</h5>
-                <ul>
-                    <li><span><a href=""><i class="fas fa-phone me-2"></i></a></span><a href="#">+212 6 10 20 30 40</a>
-                    </li>
-                    <li> <span><a href=""><i class="fas fa-envelope me-2"></i></a></span><a
-                            href="#">sylshoping@gmail.com</a></li>
-                    <li><span><a href=""><i class="fas fa-map-marker-alt me-2"></i></a></span><a href="#">Bohicon rue
-                            1495</a></li>
+                    <li><a href="#">Chaussures de sport</a></li>
+                    <li><a href="#">Vêtements</a></li>
+                    <li><a href="#">Montres</a></li>
                 </ul>
             </div>
-
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Liens vers les reseaux sociaux</h5>
+                <h5>Contactez-nous</h5>
                 <ul>
-                    <li><span><a class="facebook"
-                                href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr"><i
-                                    class="fab fa-facebook me-2"> </i></a></span><a
-                            href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr">Facebook</a></li>
-                    </li>
-
-                    <li><span><a href="https://www.whatsapp.com/?lang=fr_FR"><i
-                                    class="fab fa-whatsapp me-2"></i></a></span><a
-                            href="https://www.whatsapp.com/?lang=fr_FR">whatsapp</a></li>
-
-                    <li><span><a href="https://x.com/"><i class="fab fa-twitter me-2"></i></a></span><a
-                            href="https://x.com/">Twitter</a></li>
-                    <li><span><a href="https://www.instagram.com/"><i
-                                    class="fab fa-instagram me-2"></i></a></i></span><a
-                            href="https://www.instagram.com/">Instagram</a></li>
+                    <li><i class="fas fa-phone me-2"></i><a href="#">+229 61 00 00 00</a></li>
+                    <li><i class="fas fa-envelope me-2"></i><a href="#">sylshoping@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i><a href="#">Bohicon, rue 1495</a></li>
                 </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <h5>Réseaux sociaux</h5>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         <div class="copyright mt-5">
-            <div class="row container mx-auto">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="payment-img w-50" src="assets/imgs/payment.png" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-light text-nowrap mb-2">
-                    <p>eCommerce ©2025 All rights reserved | This template is made with by
-                        <i class="fas fa-heart"></i><span>Sylace </span><i class="fas fa-heart"></i>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="logo" src="assets/imgs/logo.png" alt="">
-                </div>
+            <div class="container text-center">
+                <p>© 2025 Sylace Commerce. Tous droits réservés. Fait avec
+                    <i class="fas fa-heart"></i> par <span>Sylace</span>
+                </p>
             </div>
         </div>
     </footer>
 
-
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
-        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/_css/script.js"></script>
 </body>
 

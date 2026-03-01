@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,421 +11,477 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/_css/style.css">
     <link rel="stylesheet" href="assets/_css/fontawesome/all.min.css">
-    <title>Sylace Shopping</title>
+    <title>Sylace Shopping - Boutique</title>
 </head>
 
 <body>
 
-    <style>
-        .product img {
-            width: 100%;
-            height: 80%;
-            box-sizing: border-box;
-            background-size: cover;
-        }
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
 
-        .pagination {
-            justify-content: center;
-        }
-
-        .pagination a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .pagination a:hover {
-            color: rgb(255, 145, 0);
-        }
-    </style>
-
-    <!-- Barre de navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 mb-5">
-        <div class="container-fluid ">
-            <img id="logo" src="assets/imgs/sl.jpg" alt="logo de l'entreprise">
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a href="index.html">
+                <img id="logo" src="assets/imgs/sl.jpg" alt="Sylace Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link active" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contactez-nous</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <i class="fas fa-shopping-bag ms-2"></i>
-                        <i class="fas fa-user ms-4"></i>
-                        <i></i>
-                    </li> -->
                 </ul>
+                <div class="d-flex align-items-center ms-3">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Goudes -->
-    <section id="factured" class="pb-5">
-        <div class="container ">
-            <h3>Les chaussures de sport</h3>
-            <hr class="w-25">
-            <p>Ici vous trouverez nos differents produits en stock concernant les chaussures de sport avec leurs prix
-                respectifs</p>
-        </div>
-
-        <div class="row mx-auto container-fluid">
-            <div onclick="window.location.href='un_produit_donne.html'" class="producttext-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class=" img-fluid w-100 h-50" src="assets/imgs/goude1.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude2.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude3.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/goude4.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="content">
+            <h1>Notre <span>Boutique</span></h1>
+            <p class="text-secondary">Explorez notre collection complète de produits premium</p>
         </div>
     </section>
 
-    <!-- Montres -->
-    <section id="factured" class="pb-5">
-        <div class="container ">
-            <h3>Les montres tactiles</h3>
-            <hr class="w-25">
-            <p> Les montres modernes </p>
-        </div>
-
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/montre1.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Montre</h5>
-                <h4 class="p-price">7000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/montre2.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Montre</h5>
-                <h4 class="p-price">7000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/montre3.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Montre</h5>
-                <h4 class="p-price">7000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/montre4.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Montre</h5>
-                <h4 class="p-price">7000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Chaussures -->
-    <section id="factured" class="pb-5">
-        <div class="container ">
-            <h3>Les chaussures de sport</h3>
-            <hr class="w-25">
-            <p>Ici vous trouverez nos differents produits en stock concernant les chaussures de sport avec leurs prix
-                respectifs</p>
-        </div>
-
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/gant1.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/gant2.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/gant3.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/gant4.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Chaussure de sport</h5>
-                <h4 class="p-price">4000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vetements -->
-    <section id="factured" class="pb-5">
+    <!-- Gourdes Section -->
+    <section id="factured" class="pb-5 animate-on-scroll">
         <div class="container">
-            <h3>Les vetements</h3>
-            <hr class="w-25">
-            <p>La section concernant les vetements </p>
+            <h3>Les gourdes</h3>
+            <hr>
+            <p>Découvrez nos différentes gourdes en stock avec leurs prix respectifs</p>
         </div>
-
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/vet1.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+        <div class="row mx-auto container-fluid mt-4">
+            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude1.webp" alt="Gourde 1">
+                        <span class="badge-new">New</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Premium</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">chemise</h5>
-                <h4 class="p-price">14000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/vet2.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude2.webp" alt="Gourde 2">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Sport</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">chemise</h5>
-                <h4 class="p-price">14000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/vet3.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude3.webp" alt="Gourde 3">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Classic</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">chemise</h5>
-                <h4 class="p-price">1400 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
             </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12 ">
-                <img class="img-fluid w-100 h-50" src="assets/imgs/vet4.webp" alt="">
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <div onclick="window.location.href='un_produit_donne.html'" class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/goude4.webp" alt="Gourde 4">
+                        <span class="badge-sale">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gourde Mini</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
                 </div>
-                <h5 class="p-name">chemise</h5>
-                <h4 class="p-price">14000 X0F</h4>
-                <button id="buy-btn" class="btn btn-outline-warning">Acheter maintenant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Montres Section -->
+    <section id="factured" class="pb-5 animate-on-scroll">
+        <div class="container">
+            <h3>Les montres tactiles</h3>
+            <hr>
+            <p>Les montres modernes pour un style unique</p>
+        </div>
+        <div class="row mx-auto container-fluid mt-4">
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/montre1.webp" alt="Montre 1">
+                        <span class="badge-new">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Montre tactile</h5>
+                        <h4 class="p-price">7 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/montre2.webp" alt="Montre 2">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Montre sport</h5>
+                        <h4 class="p-price">7 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/montre3.webp" alt="Montre 3">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Montre classic</h5>
+                        <h4 class="p-price">7 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/montre4.webp" alt="Montre 4">
+                        <span class="badge-sale">-30%</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Montre luxe</h5>
+                        <h4 class="p-price">7 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gants Section -->
+    <section id="factured" class="pb-5 animate-on-scroll">
+        <div class="container">
+            <h3>Les gants</h3>
+            <hr>
+            <p>Des gants de qualité pour toutes les occasions</p>
+        </div>
+        <div class="row mx-auto container-fluid mt-4">
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gant1.webp" alt="Gant 1">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gant sport</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gant2.webp" alt="Gant 2">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gant fitness</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gant3.webp" alt="Gant 3">
+                        <span class="badge-new">Trending</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gant pro</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/gant4.webp" alt="Gant 4">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Gant classic</h5>
+                        <h4 class="p-price">4 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vetements Section -->
+    <section id="factured" class="pb-5 animate-on-scroll">
+        <div class="container">
+            <h3>Les vêtements</h3>
+            <hr>
+            <p>La mode qui vous correspond</p>
+        </div>
+        <div class="row mx-auto container-fluid mt-4">
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/vet1.webp" alt="Vetement 1">
+                        <span class="badge-new">New</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Chemise élégante</h5>
+                        <h4 class="p-price">14 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/vet2.webp" alt="Vetement 2">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Chemise casual</h5>
+                        <h4 class="p-price">14 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/vet3.webp" alt="Vetement 3">
+                        <span class="badge-sale">Promo</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Chemise sport</h5>
+                        <h4 class="p-price">1 400 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product text-center col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/vet4.webp" alt="Vetement 4">
+                    </div>
+                    <div class="product-info">
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="p-name">Chemise premium</h5>
+                        <h4 class="p-price">14 000 XOF</h4>
+                        <button id="buy-btn" class="btn">Acheter maintenant</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Pagination -->
-    <nav class="mb-5" aria-label="Page navigation example">
+    <nav class="mb-5" aria-label="Page navigation">
         <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
         </ul>
     </nav>
 
-
     <!-- Footer -->
-    <footer class="mt-5 py-5 bg-dark">
+    <footer class="py-5">
         <div class="row container mx-auto pt-5">
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <img class="logoBotom" src="assets/imgs/sl.jpg" alt="img">
-                <p class="pt-3 text-light">Nous souhaitons que vous appréciez notre site web et que vous trouviez ce
-                    que vous
+                <img class="logoBotom" src="assets/imgs/sl.jpg" alt="Sylace Logo">
+                <p class="pt-3">Nous souhaitons que vous appréciez notre site web et que vous trouviez ce que vous
                     cherchez. Les produits et les services offerts sur notre site web sont fournis par des tiers
-                    indépendants.</p>
+                    indépendants.</p>
             </div>
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Produit et categories</h5>
+                <h5>Produits & Catégories</h5>
                 <ul>
                     <li><a href="#">Nouveaux arrivages</a></li>
-                    <li><a href="#">chaussures de sport</a></li>
-                    <li><a href="#">vetements</a></li>
-                    <li><a href="#"> Montres</a></li>
-                </ul>
-
-            </div>
-            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Contactez-nous</h5>
-                <ul>
-                    <li><span><a href=""><i class="fas fa-phone me-2"></i></a></span><a href="#">+212 6 10 20 30 40</a>
-                    </li>
-                    <li> <span><a href=""><i class="fas fa-envelope me-2"></i></a></span><a
-                            href="#">sylshoping@gmail.com</a></li>
-                    <li><span><a href=""><i class="fas fa-map-marker-alt me-2"></i></a></span><a href="#">Bohicon rue
-                            1495</a></li>
+                    <li><a href="#">Chaussures de sport</a></li>
+                    <li><a href="#">Vêtements</a></li>
+                    <li><a href="#">Montres</a></li>
                 </ul>
             </div>
-
             <div class="footer-one col-lg-3 col-md-6 col-sm-12">
-                <h5 class="pb-2">Liens vers les reseaux sociaux</h5>
+                <h5>Contactez-nous</h5>
                 <ul>
-                    <li><span><a class="facebook"
-                                href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr"><i
-                                    class="fab fa-facebook me-2"> </i></a></span><a
-                            href="https://www.facebook.com/?locale=fr_FR&refsrc=deprecated&_rdr">Facebook</a></li>
-                    </li>
-
-                    <li><span><a href="https://www.whatsapp.com/?lang=fr_FR"><i
-                                    class="fab fa-whatsapp me-2"></i></a></span><a
-                            href="https://www.whatsapp.com/?lang=fr_FR">whatsapp</a></li>
-
-                    <li><span><a href="https://x.com/"><i class="fab fa-twitter me-2"></i></a></span><a
-                            href="https://x.com/">Twitter</a></li>
-                    <li><span><a href="https://www.instagram.com/"><i
-                                    class="fab fa-instagram me-2"></i></a></i></span><a
-                            href="https://www.instagram.com/">Instagram</a></li>
+                    <li><i class="fas fa-phone me-2"></i><a href="#">+229 61 00 00 00</a></li>
+                    <li><i class="fas fa-envelope me-2"></i><a href="#">sylshoping@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i><a href="#">Bohicon, rue 1495</a></li>
                 </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-sm-12">
+                <h5>Réseaux sociaux</h5>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         <div class="copyright mt-5">
-            <div class="row container mx-auto">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="payment-img w-50" src="assets/imgs/payment.png" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-light text-nowrap mb-2">
-                    <p>eCommerce ©2025 All rights reserved | This template is made with by
-                        <i class="fas fa-heart"></i><span>Sylace </span><i class="fas fa-heart"></i>
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <img class="logo" src="assets/imgs/logo.png" alt="">
-                </div>
+            <div class="container text-center">
+                <p>© 2025 Sylace Commerce. Tous droits réservés. Fait avec
+                    <i class="fas fa-heart"></i> par <span>Sylace</span>
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
-        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/_css/script.js"></script>
 </body>
 
 </html>
